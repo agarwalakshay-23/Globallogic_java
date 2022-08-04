@@ -1,0 +1,21 @@
+/*
+ *	 	Create a lambda to find the even and odd value
+ *		create a lambda to find the largest number
+ *		create a lambda to find the minimum  number
+ *		create a lambda to print the hello world
+ *		create a lambda to print the sum of 1 to 10 0 number
+ **/
+package com.globallogic.day10.july25;
+
+import java.util.stream.Stream;
+
+public class Lambda {
+	public static void main(String[] args) {
+		public static void main(String[] args) {
+	        Predicate < String > notNull =
+	            ((Predicate < String > )(arg - > arg == null)).negate(); // #1
+	        System.out.println(notNull.test(null));
+	    }
+    }
+
+}

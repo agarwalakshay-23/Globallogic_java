@@ -1,0 +1,5 @@
+package com.globallogic.maven.MYmaven;
+
+public class MyJDBC {
+
+}

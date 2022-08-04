@@ -1,0 +1,70 @@
+/*
+ *	 	Create a lambda to find the even and odd value
+ *		create a lambda to find the largest number
+ *		create a lambda to find the minimum  number
+ *		create a lambda to print the hello world
+ *		create a lambda to print the sum of 1 to 10 0 number
+ **/
+package com.globallogic.day10.july25;
+
+import java.util.stream.Stream;
+
+@FunctionalInterface
+interface Greater {
+	int greater(int a, int b);
+}
+
+@FunctionalInterface
+interface Smaller {
+	int smaller(int a, int b);
+}
+
+@FunctionalInterface
+interface oddeven {
+	String oddeven(int a);
+}
+
+@FunctionalInterface
+interface Print {
+	void print(String S);
+}
+@FunctionalInterface
+interface SumofNaturalNumber{
+	int SumofNaturalNumber(int a);
+}
+@FunctionalInterface
+interface Negorpov{
+	int negorpov(int a);
+}
+
+
+public class Lambda {
+	public static void main(String[] args) {
+		Greater greaterObj=(a,b) -> a>b?a:b;
+		Smaller smallerobj=(a,b) -> a<b?a:b;
+		oddeven oddeven =(a) -> a%2==0? "Even":"odd";
+		Print printobj=(s)->System.out.println(s);
+		Negorpov negorpovObj=(a) ->{
+			if(a<=0) {
+				System.out.println("Negative");
+			}
+			else {
+				System.out.println("positive");
+			}
+		};
+		
+		SumofNaturalNumber sumOfNaturalNumberobj=(n)->{
+			int sum=0;
+			while(n>0) sum+=n--;
+			return sum;
+		
+		};
+		System.out.println(oddeven.oddeven(10));
+		System.out.println(greaterObj.greater(20, 10));
+		System.out.println(smallerobj.smaller(20, 10));
+		printobj.print("the lambda works fine");
+		System.out.println(negorpovObj.negorpov(10));
+		System.out.println(sumOfNaturalNumberobj.SumofNaturalNumber(10));
+		
+		}
+	}
